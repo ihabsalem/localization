@@ -4,7 +4,7 @@ from language.models import Language
 
 
 class Source(models.Model):
-    name = models.CharField(max_length=255, null=False)
+    name = models.CharField(primary_key = True, max_length=255, null=False)
 
     def __str__(self):
         return "{}".format(self.name)

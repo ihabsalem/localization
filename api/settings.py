@@ -44,11 +44,12 @@ INSTALLED_APPS+=[
     'translation',
     'source'
 ]
-# REST_FRAMEWORK = {
-#     # When you enable API versioning, the request.version attribute will contain a string
-#     # that corresponds to the version requested in the incoming client request.
-#     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
-# }
+REST_FRAMEWORK = {
+    # When you enable API versioning, the request.version attribute will contain a string
+    # that corresponds to the version requested in the incoming client request.
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
+    # 'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated')
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
